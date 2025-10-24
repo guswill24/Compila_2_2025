@@ -1,0 +1,29 @@
+// input.txt para pruebas
+
+int suma(int a, int b) {
+    return a + b;
+}
+
+int resultado = 0;
+string saludo = "hola";
+
+// --- CÓDIGO VÁLIDO ---
+resultado = suma(5, 10); 
+
+// --- ERRORES A DETECTAR ---
+
+// 1. Llamada a función no declarada
+resultado = resta(10, 5); 
+
+// 2. Número incorrecto de argumentos
+resultado = suma(5);
+
+// 3. Tipo de argumento incorrecto
+resultado = suma(5, saludo);
+
+// 4. Tipo de retorno incorrecto
+string mensaje = "";
+mensaje = suma(1, 2); // Asignando un 'int' a un 'string'
+
+// 5. Llamar a una variable como si fuera una función
+resultado();

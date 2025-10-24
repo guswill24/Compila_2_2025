@@ -1,0 +1,34 @@
+// --- Test de Código Válido ---
+
+// Declaración de una función que suma dos enteros.
+int suma(int a, int b) {
+    int resultado_local = 0;
+    resultado_local = a + b;
+    return resultado_local;
+}
+
+// Declaración de una función que concatena un saludo.
+string saludar(string nombre) {
+    // Las variables locales en diferentes funciones pueden tener el mismo nombre.
+    string resultado_local = ""; 
+    resultado_local = "Hola " + nombre;
+    return resultado_local;
+}
+
+// Variables globales.
+int total = 0;
+string mensaje = "";
+int umbral = 15;
+
+// Llamada a función y asignación.
+total = suma(10, 5);
+
+// Uso de llamada a función en una condición.
+if (total > umbral) {
+    mensaje = saludar("Mundo");
+} else {
+    mensaje = saludar("Clase");
+}
+
+// Redeclaración válida en un ámbito diferente.
+int a = 100;
